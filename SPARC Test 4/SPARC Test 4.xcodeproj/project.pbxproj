@@ -1,0 +1,287 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27F1DC2615E90797003B6087 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F1DC2515E90797003B6087 /* UIKit.framework */; };
+		27F1DC2815E90798003B6087 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F1DC2715E90798003B6087 /* Foundation.framework */; };
+		27F1DC2A15E90798003B6087 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F1DC2915E90798003B6087 /* CoreGraphics.framework */; };
+		27F1DC3015E90798003B6087 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27F1DC2E15E90798003B6087 /* InfoPlist.strings */; };
+		27F1DC3215E90798003B6087 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F1DC3115E90798003B6087 /* main.m */; };
+		27F1DC3615E90798003B6087 /* MMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F1DC3515E90798003B6087 /* MMAppDelegate.m */; };
+		27F1DC3915E90798003B6087 /* MMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F1DC3815E90798003B6087 /* MMViewController.m */; };
+		27F1DC3C15E90798003B6087 /* MMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F1DC3A15E90798003B6087 /* MMViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		27F1DC2115E90797003B6087 /* SPARC Test 4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SPARC Test 4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27F1DC2515E90797003B6087 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		27F1DC2715E90798003B6087 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		27F1DC2915E90798003B6087 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		27F1DC2D15E90798003B6087 /* SPARC Test 4-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SPARC Test 4-Info.plist"; sourceTree = "<group>"; };
+		27F1DC2F15E90798003B6087 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		27F1DC3115E90798003B6087 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		27F1DC3315E90798003B6087 /* SPARC Test 4-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPARC Test 4-Prefix.pch"; sourceTree = "<group>"; };
+		27F1DC3415E90798003B6087 /* MMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMAppDelegate.h; sourceTree = "<group>"; };
+		27F1DC3515E90798003B6087 /* MMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMAppDelegate.m; sourceTree = "<group>"; };
+		27F1DC3715E90798003B6087 /* MMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMViewController.h; sourceTree = "<group>"; };
+		27F1DC3815E90798003B6087 /* MMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMViewController.m; sourceTree = "<group>"; };
+		27F1DC3B15E90798003B6087 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MMViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27F1DC1E15E90797003B6087 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27F1DC2615E90797003B6087 /* UIKit.framework in Frameworks */,
+				27F1DC2815E90798003B6087 /* Foundation.framework in Frameworks */,
+				27F1DC2A15E90798003B6087 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27F1DC1615E90797003B6087 = {
+			isa = PBXGroup;
+			children = (
+				27F1DC2B15E90798003B6087 /* SPARC Test 4 */,
+				27F1DC2415E90797003B6087 /* Frameworks */,
+				27F1DC2215E90797003B6087 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27F1DC2215E90797003B6087 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27F1DC2115E90797003B6087 /* SPARC Test 4.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27F1DC2415E90797003B6087 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27F1DC2515E90797003B6087 /* UIKit.framework */,
+				27F1DC2715E90798003B6087 /* Foundation.framework */,
+				27F1DC2915E90798003B6087 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27F1DC2B15E90798003B6087 /* SPARC Test 4 */ = {
+			isa = PBXGroup;
+			children = (
+				27F1DC3415E90798003B6087 /* MMAppDelegate.h */,
+				27F1DC3515E90798003B6087 /* MMAppDelegate.m */,
+				27F1DC3715E90798003B6087 /* MMViewController.h */,
+				27F1DC3815E90798003B6087 /* MMViewController.m */,
+				27F1DC3A15E90798003B6087 /* MMViewController.xib */,
+				27F1DC2C15E90798003B6087 /* Supporting Files */,
+			);
+			path = "SPARC Test 4";
+			sourceTree = "<group>";
+		};
+		27F1DC2C15E90798003B6087 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27F1DC2D15E90798003B6087 /* SPARC Test 4-Info.plist */,
+				27F1DC2E15E90798003B6087 /* InfoPlist.strings */,
+				27F1DC3115E90798003B6087 /* main.m */,
+				27F1DC3315E90798003B6087 /* SPARC Test 4-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27F1DC2015E90797003B6087 /* SPARC Test 4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27F1DC3F15E90798003B6087 /* Build configuration list for PBXNativeTarget "SPARC Test 4" */;
+			buildPhases = (
+				27F1DC1D15E90797003B6087 /* Sources */,
+				27F1DC1E15E90797003B6087 /* Frameworks */,
+				27F1DC1F15E90797003B6087 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SPARC Test 4";
+			productName = "SPARC Test 4";
+			productReference = 27F1DC2115E90797003B6087 /* SPARC Test 4.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27F1DC1815E90797003B6087 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MM;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Michael McEvoy";
+			};
+			buildConfigurationList = 27F1DC1B15E90797003B6087 /* Build configuration list for PBXProject "SPARC Test 4" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 27F1DC1615E90797003B6087;
+			productRefGroup = 27F1DC2215E90797003B6087 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27F1DC2015E90797003B6087 /* SPARC Test 4 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27F1DC1F15E90797003B6087 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27F1DC3015E90798003B6087 /* InfoPlist.strings in Resources */,
+				27F1DC3C15E90798003B6087 /* MMViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27F1DC1D15E90797003B6087 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27F1DC3215E90798003B6087 /* main.m in Sources */,
+				27F1DC3615E90798003B6087 /* MMAppDelegate.m in Sources */,
+				27F1DC3915E90798003B6087 /* MMViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		27F1DC2E15E90798003B6087 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27F1DC2F15E90798003B6087 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		27F1DC3A15E90798003B6087 /* MMViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27F1DC3B15E90798003B6087 /* en */,
+			);
+			name = MMViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27F1DC3D15E90798003B6087 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		27F1DC3E15E90798003B6087 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27F1DC4015E90798003B6087 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SPARC Test 4/SPARC Test 4-Prefix.pch";
+				INFOPLIST_FILE = "SPARC Test 4/SPARC Test 4-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		27F1DC4115E90798003B6087 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SPARC Test 4/SPARC Test 4-Prefix.pch";
+				INFOPLIST_FILE = "SPARC Test 4/SPARC Test 4-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27F1DC1B15E90797003B6087 /* Build configuration list for PBXProject "SPARC Test 4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27F1DC3D15E90798003B6087 /* Debug */,
+				27F1DC3E15E90798003B6087 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27F1DC3F15E90798003B6087 /* Build configuration list for PBXNativeTarget "SPARC Test 4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27F1DC4015E90798003B6087 /* Debug */,
+				27F1DC4115E90798003B6087 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27F1DC1815E90797003B6087 /* Project object */;
+}
