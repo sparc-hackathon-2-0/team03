@@ -101,14 +101,16 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"MM/dd/yyyy HH:mm:ss"];
     if ([self CurrentType] == kCurrentTimeTypeStart) {
-        NSTimeInterval time = round([[[picker DatePicker] date] timeIntervalSinceReferenceDate] / 60.0) * 60.0;
-        NSDate *minute = [NSDate dateWithTimeIntervalSinceReferenceDate:time];
-        [[self ThisTime] setStartTimeStamp:minute];
+        NSDate              *dateTime = [[picker DatePicker] date];
+        NSDateComponents    *seconds = [[NSCalendar currentCalendar] components: NSSecondCalendarUnit fromDate:dateTime];
+        dateTime = [NSDate dateWithTimeIntervalSinceReferenceDate:[dateTime timeIntervalSinceReferenceDate] - [seconds second]];
+        [[self ThisTime] setStartTimeStamp:dateTime];
         [[self StartTimeButton] setTitle:[formatter stringFromDate:[[self ThisTime] StartTimeStamp]] forState:UIControlStateNormal];
     } else {
-        NSTimeInterval time = round([[[picker DatePicker] date] timeIntervalSinceReferenceDate] / 60.0) * 60.0;
-        NSDate *minute = [NSDate dateWithTimeIntervalSinceReferenceDate:time];
-        [[self ThisTime] setStopTimeStamp:minute];
+        NSDate              *dateTime = [[picker DatePicker] date];
+        NSDateComponents    *seconds = [[NSCalendar currentCalendar] components: NSSecondCalendarUnit fromDate:dateTime];
+        dateTime = [NSDate dateWithTimeIntervalSinceReferenceDate:[dateTime timeIntervalSinceReferenceDate] - [seconds second]];
+        [[self ThisTime] setStopTimeStamp:dateTime];
         [[self StopTimeButton] setTitle:[formatter stringFromDate:[[self ThisTime] StopTimeStamp]] forState:UIControlStateNormal];
     }
     [self dismissViewControllerAnimated:YES completion:NULL];

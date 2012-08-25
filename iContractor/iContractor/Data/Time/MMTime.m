@@ -5,6 +5,7 @@
 #import "MMTime.h"
 #import "MMProject.h"
 @implementation MMTime
+@synthesize Invoiced;
 @synthesize OwningProject;
 @synthesize StartTimeStamp;
 @synthesize StopTimeStamp;
@@ -12,6 +13,7 @@
 - (id) initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
     if (self) {
+        [self setInvoiced:      [aDecoder decodeBoolForKey:@"Invoiced"]];
         [self setOwningProject: [aDecoder decodeObjectForKey:@"OwningProject"]];
         [self setStartTimeStamp:[aDecoder decodeObjectForKey:@"StartTimeStamp"]];
         [self setStopTimeStamp: [aDecoder decodeObjectForKey:@"StopTimeStamp"]];
@@ -20,6 +22,7 @@
     return self;
 }
 - (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeBool:  [self Invoiced]        forKey:@"Invoiced"];
     [aCoder encodeObject:[self OwningProject]   forKey:@"OwningProject"];
     [aCoder encodeObject:[self StartTimeStamp]  forKey:@"StartTimeStamp"];
     [aCoder encodeObject:[self StopTimeStamp]   forKey:@"StopTimeStamp"];

@@ -2,18 +2,22 @@
 //  iContractor
 //  Created by Michael McEvoy on 8/25/12.
 //  Copyright (c) 2012 Michael McEvoy. All rights reserved.
+#import <QuartzCore/QuartzCore.h>
 #import "MMClientDetailViewController.h"
 #import "MMAddProjectViewController.h"
 #import "MMButton.h"
 #import "MMClient.h"
 #import "MMEditClientViewController.h"
+#import "MMInvoice.h"
 #import "MMProject.h"
 #import "MMProjectDetailViewController.h"
+#import "MMTime.h"
 @implementation MMClientDetailViewController
 @synthesize CallClient;
 @synthesize ContactLabel;
 @synthesize EmailClient;
 @synthesize EmailLabel;
+@synthesize Invoicer;
 @synthesize NumberLabel;
 @synthesize ProjectsTableView;
 @synthesize RateLabel;
@@ -68,14 +72,26 @@
     [self presentModalViewController:vc animated:YES];
 }
 - (IBAction)InvoicePressed:(id)sender {
+    NSString *html = [MMInvoice htmlForInvoiceForClient:[self ThisClient]];
     MFMailComposeViewController *vc = [[MFMailComposeViewController alloc] init];
+    [vc setMessageBody:html isHTML:YES];
     [vc setMailComposeDelegate:self];
     [vc setSubject:@"Invoice from Contractor"];
     [vc setToRecipients:@[[[self ThisClient] Email]]];
     [vc setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
+    [self setInvoicer:vc];
     [self presentModalViewController:vc animated:YES];
 }
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    if (result == MFMailComposeResultSent) {
+        if (controller == [self Invoicer]) {
+            for (MMProject *project in [[self ThisClient] Projects]) {
+                for (MMTime *time in [project LoggedTimes]) {
+                    [time setInvoiced:YES];
+                }
+            }
+        }
+    }
     [self dismissModalViewControllerAnimated:YES];
 }
 #pragma mark - UITableView Data Source methods

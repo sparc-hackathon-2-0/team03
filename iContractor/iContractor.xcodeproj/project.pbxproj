@@ -11,6 +11,8 @@
 		2700E25415E9605700702AAB /* MMEditProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2700E25215E9605700702AAB /* MMEditProjectViewController.xib */; };
 		2700E25915E9681A00702AAB /* MMSelectDateTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2700E25715E9681A00702AAB /* MMSelectDateTimeViewController.m */; };
 		2700E25A15E9681A00702AAB /* MMSelectDateTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2700E25815E9681A00702AAB /* MMSelectDateTimeViewController.xib */; };
+		2700E25E15E9842700702AAB /* MMInvoice.m in Sources */ = {isa = PBXBuildFile; fileRef = 2700E25D15E9842700702AAB /* MMInvoice.m */; };
+		2700E26015E9852900702AAB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2700E25F15E9852800702AAB /* QuartzCore.framework */; };
 		271F46B515E913BF00C1E6DF /* MMClientsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271F46B315E913BF00C1E6DF /* MMClientsViewController.m */; };
 		271F46B615E913BF00C1E6DF /* MMClientsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271F46B415E913BF00C1E6DF /* MMClientsViewController.xib */; };
 		271F46BA15E913D200C1E6DF /* MMProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271F46B815E913D200C1E6DF /* MMProjectsViewController.m */; };
@@ -63,6 +65,9 @@
 		2700E25615E9681A00702AAB /* MMSelectDateTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMSelectDateTimeViewController.h; path = "Navigation/Select Date Time/MMSelectDateTimeViewController.h"; sourceTree = "<group>"; };
 		2700E25715E9681A00702AAB /* MMSelectDateTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMSelectDateTimeViewController.m; path = "Navigation/Select Date Time/MMSelectDateTimeViewController.m"; sourceTree = "<group>"; };
 		2700E25815E9681A00702AAB /* MMSelectDateTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MMSelectDateTimeViewController.xib; path = "Navigation/Select Date Time/MMSelectDateTimeViewController.xib"; sourceTree = "<group>"; };
+		2700E25C15E9842700702AAB /* MMInvoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMInvoice.h; path = Data/Invoice/MMInvoice.h; sourceTree = "<group>"; };
+		2700E25D15E9842700702AAB /* MMInvoice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMInvoice.m; path = Data/Invoice/MMInvoice.m; sourceTree = "<group>"; };
+		2700E25F15E9852800702AAB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		271F46B215E913BF00C1E6DF /* MMClientsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMClientsViewController.h; path = Navigation/Clients/MMClientsViewController.h; sourceTree = "<group>"; };
 		271F46B315E913BF00C1E6DF /* MMClientsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMClientsViewController.m; path = Navigation/Clients/MMClientsViewController.m; sourceTree = "<group>"; };
 		271F46B415E913BF00C1E6DF /* MMClientsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MMClientsViewController.xib; path = Navigation/Clients/MMClientsViewController.xib; sourceTree = "<group>"; };
@@ -134,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2700E26015E9852900702AAB /* QuartzCore.framework in Frameworks */,
 				271F471C15E958E400C1E6DF /* MessageUI.framework in Frameworks */,
 				27F1DC5215E91132003B6087 /* UIKit.framework in Frameworks */,
 				27F1DC5415E91132003B6087 /* Foundation.framework in Frameworks */,
@@ -164,6 +170,15 @@
 			name = "Select Date Time";
 			sourceTree = "<group>";
 		};
+		2700E25B15E9841100702AAB /* Invoice */ = {
+			isa = PBXGroup;
+			children = (
+				2700E25C15E9842700702AAB /* MMInvoice.h */,
+				2700E25D15E9842700702AAB /* MMInvoice.m */,
+			);
+			name = Invoice;
+			sourceTree = "<group>";
+		};
 		271F46C415E9140200C1E6DF /* MMButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,8 +191,9 @@
 		271F46C515E9218E00C1E6DF /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				271F46FD15E944F100C1E6DF /* FileHelpers */,
 				271F46C615E9219800C1E6DF /* Client */,
+				271F46FD15E944F100C1E6DF /* FileHelpers */,
+				2700E25B15E9841100702AAB /* Invoice */,
 				271F46C715E9219E00C1E6DF /* Project */,
 				271F46C815E921A700C1E6DF /* Time */,
 			);
@@ -328,6 +344,7 @@
 				27F1DC5515E91132003B6087 /* CoreGraphics.framework */,
 				27F1DC5315E91132003B6087 /* Foundation.framework */,
 				271F471B15E958E300C1E6DF /* MessageUI.framework */,
+				2700E25F15E9852800702AAB /* QuartzCore.framework */,
 				27F1DC5115E91132003B6087 /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -541,6 +558,7 @@
 				271F471915E94F9700C1E6DF /* MMTimeDetailViewController.m in Sources */,
 				2700E25315E9605700702AAB /* MMEditProjectViewController.m in Sources */,
 				2700E25915E9681A00702AAB /* MMSelectDateTimeViewController.m in Sources */,
+				2700E25E15E9842700702AAB /* MMInvoice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,11 +5,13 @@
 #import <Foundation/Foundation.h>
 @class MMProject;
 @interface MMTime : NSObject <NSCoding> {
+    BOOL                 Invoiced;
     __weak MMProject    *OwningProject;
     NSDate              *StartTimeStamp;
     NSDate              *StopTimeStamp;
     NSNumber            *TotalHours;
 }
+@property (assign, nonatomic) BOOL       Invoiced;
 @property (weak,   nonatomic) MMProject *OwningProject;
 @property (strong, nonatomic) NSDate    *StartTimeStamp;
 @property (strong, nonatomic) NSDate    *StopTimeStamp;
