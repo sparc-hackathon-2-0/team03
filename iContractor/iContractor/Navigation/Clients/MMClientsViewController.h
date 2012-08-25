@@ -1,13 +1,11 @@
-//
 //  MMClientsViewController.h
 //  iContractor
-//
 //  Created by Michael McEvoy on 8/25/12.
 //  Copyright (c) 2012 Michael McEvoy. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
-
-@interface MMClientsViewController : UIViewController
-
+@class MMAppDelegate;
+@interface MMClientsViewController : UITableViewController {
+    MMAppDelegate *Delegate;
+}
+@property (strong, nonatomic) MMAppDelegate *Delegate;
 @end

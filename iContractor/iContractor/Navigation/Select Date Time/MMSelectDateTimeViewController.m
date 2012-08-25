@@ -1,38 +1,19 @@
-//
 //  MMSelectDateTimeViewController.m
 //  iContractor
-//
 //  Created by Michael McEvoy on 8/25/12.
 //  Copyright (c) 2012 Michael McEvoy. All rights reserved.
-//
-
 #import "MMSelectDateTimeViewController.h"
-
-@interface MMSelectDateTimeViewController ()
-
-@end
-
+#import "MMButton.h"
 @implementation MMSelectDateTimeViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
+@synthesize AcceptTimeStamp;
+@synthesize DatePicker;
+@synthesize Owner;
+- (void) viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [[self AcceptTimeStamp] setButtonBackgroundColor:[UIColor colorWithRed:0.33 green:0.33 blue:0.33 alpha:1.0]];
+    [[self AcceptTimeStamp] setButtonBackground];
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)AcceptPressed:(id)sender {
+    [[self Owner] datePickerDone:self];
 }
-
 @end

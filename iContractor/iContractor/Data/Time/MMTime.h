@@ -1,13 +1,18 @@
-//
 //  MMTime.h
 //  iContractor
-//
 //  Created by Michael McEvoy on 8/25/12.
 //  Copyright (c) 2012 Michael McEvoy. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
-
-@interface MMTime : NSObject
-
+@class MMProject;
+@interface MMTime : NSObject <NSCoding> {
+    __weak MMProject    *OwningProject;
+    NSDate              *StartTimeStamp;
+    NSDate              *StopTimeStamp;
+    NSNumber            *TotalHours;
+}
+@property (weak,   nonatomic) MMProject *OwningProject;
+@property (strong, nonatomic) NSDate    *StartTimeStamp;
+@property (strong, nonatomic) NSDate    *StopTimeStamp;
+@property (strong, nonatomic) NSNumber  *TotalHours;
+- (NSString *)TimeString;
 @end

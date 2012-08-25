@@ -1,54 +1,40 @@
-//
 //  MMAppDelegate.m
 //  iContractor
-//
 //  Created by Michael McEvoy on 8/25/12.
 //  Copyright (c) 2012 Michael McEvoy. All rights reserved.
-//
-
 #import "MMAppDelegate.h"
-
-#import "MMMasterViewController.h"
-
+#import "FileHelpers.h"
+#import "MMRootViewController.h"
 @implementation MMAppDelegate
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-
-    MMMasterViewController *masterViewController = [[MMMasterViewController alloc] initWithNibName:@"MMMasterViewController" bundle:nil];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
-    self.window.rootViewController = self.navigationController;
-    [self.window makeKeyAndVisible];
+@synthesize ClientList;
+@synthesize NavigationController;
+@synthesize Window;
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self loadData];
+    [self setWindow:[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]];
+    MMRootViewController *rootVC = [[MMRootViewController alloc] initWithNibName:@"MMRootViewController" bundle:nil];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:rootVC];
+    [self setNavigationController:navController];
+    [[self Window] setRootViewController:[self NavigationController]];
+    [[self Window] makeKeyAndVisible];
     return YES;
 }
-
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    [self loadData];
 }
-
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    [self saveData];
 }
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+- (void)loadData {
+    [self setClientList:    [NSKeyedUnarchiver unarchiveObjectWithFile:[self pathToDataFile]]];
+    if (![self ClientList]) {
+        [self setClientList:[NSMutableArray array]];
+    }
 }
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+- (void)saveData {
+    [NSKeyedArchiver archiveRootObject:[self ClientList]    toFile:[self pathToDataFile]];
 }
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+- (NSString *)pathToDataFile {
+    return pathInDocumentDirectory(@"Clients.data");
 }
-
 @end

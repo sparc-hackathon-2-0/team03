@@ -1,23 +1,10 @@
-/*
- *  FileHelpers.m
- *  Homepwner
- *
- *  Created by Michael Mcevoy on 2/3/10.
- *  Copyright 2010 Image Management Solutions. All rights reserved.
- *
- */
-
+//  FileHelpers.m
+//  iContractor
+//  Created by Michael McEvoy on 8/25/12
+//  Copyright 2012 Michael McEvoy. All rights reserved.
 #include "FileHelpers.h"
-
-NSString *pathInDocumentDirectory(NSString *fileName)
-{
-	// Get list of document directories in sandbox
+NSString *pathInDocumentDirectory(NSString *fileName) {
 	NSArray *documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	
-	// Get one and only one document directory from that list
 	NSString *documentDirectory = [documentDirectories objectAtIndex:0];
-	
-	// Append passed in file name to that directory, return it
 	return [documentDirectory stringByAppendingPathComponent:fileName];
-	
-} // pathInDocumentDirectory
+}
