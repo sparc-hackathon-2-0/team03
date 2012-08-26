@@ -26,7 +26,7 @@
     [self saveData];
 }
 - (void)loadData {
-    [self setClientList:    [NSKeyedUnarchiver unarchiveObjectWithFile:[self pathToDataFile]]];
+    [self setClientList:[NSKeyedUnarchiver unarchiveObjectWithFile:[self pathToDataFile]]];
     if (![self ClientList]) {
         [self setClientList:[NSMutableArray array]];
     }
