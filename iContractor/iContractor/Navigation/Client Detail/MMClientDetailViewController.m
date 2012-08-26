@@ -60,8 +60,23 @@
     [[self navigationController] pushViewController:detailVC animated:YES];
 }
 - (IBAction)CallPressed:(id)sender {
-    NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"tel://%@", [[self ThisClient] Phone]]];
+    NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"tel://%@", [self formatNumber:[[self ThisClient] Phone]]]];
+    NSLog(@"%@", url);
     [[UIApplication sharedApplication] openURL:url];
+}
+- (NSString *)formatNumber:(NSString *)mobileNumber {
+    mobileNumber = [mobileNumber stringByReplacingOccurrencesOfString:@"(" withString:@""];
+    mobileNumber = [mobileNumber stringByReplacingOccurrencesOfString:@")" withString:@""];
+    mobileNumber = [mobileNumber stringByReplacingOccurrencesOfString:@" " withString:@""];
+    mobileNumber = [mobileNumber stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    mobileNumber = [mobileNumber stringByReplacingOccurrencesOfString:@"+" withString:@""];
+    NSLog(@"%@", mobileNumber);
+    int length = [mobileNumber length];
+    if(length > 10) {
+        mobileNumber = [mobileNumber substringFromIndex: length-10];
+        NSLog(@"%@", mobileNumber);
+    }
+    return mobileNumber;
 }
 - (IBAction)EmailPressed:(id)sender {
     MFMailComposeViewController *vc = [[MFMailComposeViewController alloc] init];
