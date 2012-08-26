@@ -9,9 +9,11 @@
 @interface MMRootViewController : UIViewController {
     MMButton        *ClientsButton;
     MMButton        *TimeButton;
+    UIImageView     *LaunchImage;
 }
 @property (strong, nonatomic) IBOutlet  MMButton    *ClientsButton;
 @property (strong, nonatomic) IBOutlet  MMButton    *TimeButton;
+@property (strong, nonatomic)           UIImageView *LaunchImage;
 - (IBAction)ClientsPressed:(id)sender;
 - (IBAction)TimePressed:(id)sender;
 @end

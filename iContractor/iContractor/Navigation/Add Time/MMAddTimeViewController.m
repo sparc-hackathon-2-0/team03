@@ -4,6 +4,7 @@
 //  Copyright (c) 2012 Michael McEvoy. All rights reserved.
 #import "MMAddTimeViewController.h"
 #import "MMButton.h"
+#import "MMClient.h"
 #import "MMProject.h"
 #import "MMTime.h"
 @implementation MMAddTimeViewController
@@ -22,6 +23,10 @@
     [[self StartStopButton] setButtonBackgroundColor:[UIColor colorWithRed:0.00 green:0.75 blue:0.00 alpha:1.00]];
     [[self StartStopButton] setButtonBackground];
     
+}
+- (void)viewWillAppear:(BOOL)animated {
+    MMClient *client = [[self ThisProject] OwningClient];
+    [self setTitle:[client Name]];
 }
 - (void)viewWillDisappear:(BOOL)animated {
     if ([self Timer]) {

@@ -30,7 +30,7 @@
     if (![self ClientList]) {
         [self setClientList:[NSMutableArray array]];
     }
-    //[self setClientList:[NSMutableArray array]];
+    [self setClientList:[NSMutableArray array]];
 }
 - (void)saveData {
     [NSKeyedArchiver archiveRootObject:[self ClientList]    toFile:[self pathToDataFile]];

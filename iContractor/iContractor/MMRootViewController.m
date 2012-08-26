@@ -8,9 +8,16 @@
 #import "MMTimeViewController.h"
 @implementation MMRootViewController
 @synthesize ClientsButton;
+@synthesize LaunchImage;
 @synthesize TimeButton;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImageView *iv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Launch.png"]];
+    [iv setFrame:[[self view] bounds]];
+    [[self view] addSubview:iv];
+    [[self view] bringSubviewToFront:iv];
+    [self setLaunchImage:iv];
+    
     [[self navigationController] setNavigationBarHidden:YES animated:NO];
     [[self ClientsButton]   setButtonBackgroundColor:[UIColor colorWithRed:0.33 green:0.33 blue:0.33 alpha:1.0]];
     [[self ClientsButton]   setButtonBackground];
@@ -23,6 +30,23 @@
     if (![[self navigationController] isNavigationBarHidden]) {
         [[self navigationController] setNavigationBarHidden:YES animated:YES];
     }
+    if ([self LaunchImage]) {
+        [self performSelector:@selector(dissolveLaunch) withObject:nil afterDelay:3.0];
+    }
+}
+- (void)dissolveLaunch {
+    [UIView animateWithDuration:1.0
+                     animations:^{
+                         [[self LaunchImage] setAlpha:0.0];
+                     }
+                     completion:^(BOOL finished) {
+                         [self removeLaunch];
+                     }
+     ];
+}
+- (void)removeLaunch {
+    [[self LaunchImage] removeFromSuperview];
+    [self setLaunchImage:nil];
 }
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

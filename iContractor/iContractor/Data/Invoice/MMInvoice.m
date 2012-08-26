@@ -15,7 +15,7 @@
     // Make the PDF's html
     [html appendString:@"<html>"];
     [html appendString:@"<body>"];
-    [html appendFormat:@"<h1>Dear %@,</h1><br />\n", [client Name]];
+    [html appendFormat:@"<h1>Dear %@,</h1><br />\n", [client PrimaryContact]];
     [html appendString:@"<p>Please see the most recent charges below.</p><br />\n"];
     float totalCharge = 0;
     for (MMProject *project in [client Projects]) {

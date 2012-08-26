@@ -23,6 +23,7 @@
     self = [super init];
     if (self) {
         [self setHourlyRate:    [aDecoder decodeObjectForKey:@"HourlyRate"]];
+        [self setLoggedTimes:   [aDecoder decodeObjectForKey:@"LoggedTimes"]];
         [self setName:          [aDecoder decodeObjectForKey:@"Name"]];
         [self setOwningClient:  [aDecoder decodeObjectForKey:@"OwningClient"]];
         [self setProjectLumpSum:[aDecoder decodeObjectForKey:@"ProjectLumpSum"]];
@@ -31,6 +32,7 @@
 }
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [aCoder encodeObject:[self HourlyRate]      forKey:@"HourlyRate"];
+    [aCoder encodeObject:[self LoggedTimes]     forKey:@"LoggedTimes"];
     [aCoder encodeObject:[self Name]            forKey:@"Name"];
     [aCoder encodeObject:[self OwningClient]    forKey:@"OwningClient"];
     [aCoder encodeObject:[self ProjectLumpSum]  forKey:@"ProjectLumpSum"];

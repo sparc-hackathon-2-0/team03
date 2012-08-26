@@ -47,6 +47,11 @@
 		271F471915E94F9700C1E6DF /* MMTimeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271F471715E94F9700C1E6DF /* MMTimeDetailViewController.m */; };
 		271F471A15E94F9700C1E6DF /* MMTimeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271F471815E94F9700C1E6DF /* MMTimeDetailViewController.xib */; };
 		271F471C15E958E400C1E6DF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271F471B15E958E300C1E6DF /* MessageUI.framework */; };
+		271F475B15E9A0A400C1E6DF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 271F475915E9A0A400C1E6DF /* Icon.png */; };
+		271F475C15E9A0A400C1E6DF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 271F475A15E9A0A400C1E6DF /* Icon@2x.png */; };
+		271F476215E9A2EC00C1E6DF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 271F476015E9A0BA00C1E6DF /* Default@2x.png */; };
+		271F476415E9A30E00C1E6DF /* Launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 271F476315E9A30E00C1E6DF /* Launch.png */; };
+		271F476515E9A4EE00C1E6DF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 271F475E15E9A0B500C1E6DF /* Default.png */; };
 		27F1DC5215E91132003B6087 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F1DC5115E91132003B6087 /* UIKit.framework */; };
 		27F1DC5415E91132003B6087 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F1DC5315E91132003B6087 /* Foundation.framework */; };
 		27F1DC5615E91132003B6087 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F1DC5515E91132003B6087 /* CoreGraphics.framework */; };
@@ -117,6 +122,11 @@
 		271F471715E94F9700C1E6DF /* MMTimeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMTimeDetailViewController.m; path = "Navigation/Time Detail/MMTimeDetailViewController.m"; sourceTree = "<group>"; };
 		271F471815E94F9700C1E6DF /* MMTimeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MMTimeDetailViewController.xib; path = "Navigation/Time Detail/MMTimeDetailViewController.xib"; sourceTree = "<group>"; };
 		271F471B15E958E300C1E6DF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		271F475915E9A0A400C1E6DF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		271F475A15E9A0A400C1E6DF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		271F475E15E9A0B500C1E6DF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		271F476015E9A0BA00C1E6DF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		271F476315E9A30E00C1E6DF /* Launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launch.png; sourceTree = "<group>"; };
 		27F1DC4D15E91132003B6087 /* iContractor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iContractor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F1DC5115E91132003B6087 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27F1DC5315E91132003B6087 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -289,11 +299,14 @@
 		271F46FE15E9460500C1E6DF /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				271F470D15E94A8900C1E6DF /* New Project.png */,
+				271F476315E9A30E00C1E6DF /* Launch.png */,
 				271F46FF15E9461700C1E6DF /* Clients100.png */,
 				271F470015E9461700C1E6DF /* Clock100.png */,
+				271F475915E9A0A400C1E6DF /* Icon.png */,
+				271F475A15E9A0A400C1E6DF /* Icon@2x.png */,
 				271F470115E9461700C1E6DF /* dollar100.png */,
 				271F470215E9461700C1E6DF /* Email.png */,
+				271F470D15E94A8900C1E6DF /* New Project.png */,
 				271F470315E9461700C1E6DF /* Printer72.png */,
 				271F470415E9461700C1E6DF /* Projects100.png */,
 				271F470515E9461700C1E6DF /* Square72.png */,
@@ -324,6 +337,8 @@
 		27F1DC4215E91132003B6087 = {
 			isa = PBXGroup;
 			children = (
+				271F476015E9A0BA00C1E6DF /* Default@2x.png */,
+				271F475E15E9A0B500C1E6DF /* Default.png */,
 				27F1DC5715E91132003B6087 /* iContractor */,
 				27F1DC5015E91132003B6087 /* Frameworks */,
 				27F1DC4E15E91132003B6087 /* Products */,
@@ -527,6 +542,11 @@
 				271F471A15E94F9700C1E6DF /* MMTimeDetailViewController.xib in Resources */,
 				2700E25415E9605700702AAB /* MMEditProjectViewController.xib in Resources */,
 				2700E25A15E9681A00702AAB /* MMSelectDateTimeViewController.xib in Resources */,
+				271F475B15E9A0A400C1E6DF /* Icon.png in Resources */,
+				271F475C15E9A0A400C1E6DF /* Icon@2x.png in Resources */,
+				271F476215E9A2EC00C1E6DF /* Default@2x.png in Resources */,
+				271F476415E9A30E00C1E6DF /* Launch.png in Resources */,
+				271F476515E9A4EE00C1E6DF /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

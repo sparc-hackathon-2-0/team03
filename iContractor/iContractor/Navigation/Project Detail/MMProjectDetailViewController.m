@@ -41,6 +41,10 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    MMClient *thisClient = [[self ThisProject] OwningClient];
+    [self setTitle:[thisClient Name]];
+    
     NSSortDescriptor *sortByDate = [[NSSortDescriptor alloc] initWithKey:@"StartTimeStamp" ascending:YES];
     [[[self ThisProject] LoggedTimes] sortUsingDescriptors:@[sortByDate]];
     [[self TimesTableView] reloadData];
@@ -90,6 +94,11 @@
             [[cell textLabel] setText:[NSString stringWithFormat:@"Dates: %@-%@", startDate, endDate]];
         }
         [[cell detailTextLabel] setText:[NSString stringWithFormat:@"Total Time: %@", [cellTime TimeString]]];
+        if ([cellTime Invoiced]) {
+            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+        } else {
+            [cell setAccessoryType:UITableViewCellAccessoryNone];
+        }
     }
     return cell;
 }

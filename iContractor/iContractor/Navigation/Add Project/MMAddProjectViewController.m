@@ -48,7 +48,7 @@
             [[NSScanner scannerWithString:[[self RateField] text]] scanFloat:&rate];
             [newProject setHourlyRate:[NSNumber numberWithFloat:rate]];
         } else {
-            [newProject setHourlyRate:nil];
+            [newProject setHourlyRate:[[self ThisClient] HourlyRate]];
         }
         [newProject setProjectLumpSum:nil];
     } else {
